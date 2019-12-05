@@ -1,1 +1,4 @@
 # binder
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/4d-for-ios-sdk/binder/master?filepath=Kotlin.ipynb)
+Copy markdown link to clipboard
