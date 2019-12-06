@@ -1,0 +1,23 @@
+set -ex
+
+pip install -r requirements.txt
+
+jupyter lab clean
+
+# beakerx kernel
+jupyter nbextension install beakerx --py --sys-prefix
+jupyter nbextension enable beakerx --py --sys-prefix
+
+## kotlin
+jupyter kernelspec install --sys-prefix --replace --name kotlin /srv/conda/envs/notebook/lib/python3.7/site-packages/beakerx/kernel/kotlin
+sed -i 's/${PATH}/"\/srv\/conda\/envs\/notebook\/lib\/python3.7\/site-packages\/beakerx\/kernel\/base\/lib\/*:\/srv\/conda\/envs\/notebook\/lib\/python3.7\/site-packages\/beakerx\/kernel\/kotlin\/lib\/*"/g' /srv/conda/envs/notebook/share/jupyter/kernels/kotlin/kernel.json
+
+# check kernel
+jupyter kernelspec list
+
+# java
+conda install -c anaconda openjdk -y
+# java -version
+
+# Setup a workspace
+jupyter lab workspaces import binder/workspace.json
