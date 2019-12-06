@@ -1,0 +1,7 @@
+panda
+plot
+chart
+pandas
+py4j
+ipykernel
+beakerx
