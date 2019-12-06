@@ -1,0 +1,3 @@
+[submodule "notebooks/doc"]
+	path = notebooks/doc
+	url = https://github.com/twosigma/beakerx.git
